@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E92BF00C21CB6126005089BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BF00B21CB6126005089BF /* AppDelegate.m */; };
+		E92BF00F21CB6126005089BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BF00E21CB6126005089BF /* ViewController.m */; };
+		E92BF01221CB6126005089BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E92BF01021CB6126005089BF /* Main.storyboard */; };
+		E92BF01421CB6126005089BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E92BF01321CB6126005089BF /* Assets.xcassets */; };
+		E92BF01721CB6126005089BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E92BF01521CB6126005089BF /* LaunchScreen.storyboard */; };
+		E92BF01A21CB6126005089BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BF01921CB6126005089BF /* main.m */; };
+		E92BF02421CB6126005089BF /* JhPrivacyAuthToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BF02321CB6126005089BF /* JhPrivacyAuthToolTests.m */; };
+		E92BF02F21CB6126005089BF /* JhPrivacyAuthToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BF02E21CB6126005089BF /* JhPrivacyAuthToolUITests.m */; };
+		E92BF08621CB638B005089BF /* JhPrivacyAuthTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BF08421CB638B005089BF /* JhPrivacyAuthTool.m */; };
+		E92BF08F21CB64E8005089BF /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = E92BF08E21CB64E8005089BF /* 0.png */; };
+		E92BF09321CB6530005089BF /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E92BF09021CB6530005089BF /* 1.png */; };
+		E92BF09421CB6530005089BF /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = E92BF09121CB6530005089BF /* 2.png */; };
+		E92BF09521CB6530005089BF /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = E92BF09221CB6530005089BF /* 3.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E92BF02021CB6126005089BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E92BEFFF21CB6126005089BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E92BF00621CB6126005089BF;
+			remoteInfo = JhPrivacyAuthTool;
+		};
+		E92BF02B21CB6126005089BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E92BEFFF21CB6126005089BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E92BF00621CB6126005089BF;
+			remoteInfo = JhPrivacyAuthTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E92BF00721CB6126005089BF /* JhPrivacyAuthTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JhPrivacyAuthTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92BF00A21CB6126005089BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E92BF00B21CB6126005089BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E92BF00D21CB6126005089BF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E92BF00E21CB6126005089BF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E92BF01121CB6126005089BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E92BF01321CB6126005089BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E92BF01621CB6126005089BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E92BF01821CB6126005089BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E92BF01921CB6126005089BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E92BF01F21CB6126005089BF /* JhPrivacyAuthToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhPrivacyAuthToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92BF02321CB6126005089BF /* JhPrivacyAuthToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhPrivacyAuthToolTests.m; sourceTree = "<group>"; };
+		E92BF02521CB6126005089BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E92BF02A21CB6126005089BF /* JhPrivacyAuthToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhPrivacyAuthToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92BF02E21CB6126005089BF /* JhPrivacyAuthToolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhPrivacyAuthToolUITests.m; sourceTree = "<group>"; };
+		E92BF03021CB6126005089BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E92BF08421CB638B005089BF /* JhPrivacyAuthTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhPrivacyAuthTool.m; sourceTree = "<group>"; };
+		E92BF08521CB638B005089BF /* JhPrivacyAuthTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhPrivacyAuthTool.h; sourceTree = "<group>"; };
+		E92BF08E21CB64E8005089BF /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		E92BF09021CB6530005089BF /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		E92BF09121CB6530005089BF /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		E92BF09221CB6530005089BF /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E92BF00421CB6126005089BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E92BF01C21CB6126005089BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E92BF02721CB6126005089BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E92BEFFE21CB6126005089BF = {
+			isa = PBXGroup;
+			children = (
+				E92BF00921CB6126005089BF /* JhPrivacyAuthTool */,
+				E92BF02221CB6126005089BF /* JhPrivacyAuthToolTests */,
+				E92BF02D21CB6126005089BF /* JhPrivacyAuthToolUITests */,
+				E92BF00821CB6126005089BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E92BF00821CB6126005089BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E92BF00721CB6126005089BF /* JhPrivacyAuthTool.app */,
+				E92BF01F21CB6126005089BF /* JhPrivacyAuthToolTests.xctest */,
+				E92BF02A21CB6126005089BF /* JhPrivacyAuthToolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E92BF00921CB6126005089BF /* JhPrivacyAuthTool */ = {
+			isa = PBXGroup;
+			children = (
+				E92BF08721CB6392005089BF /* screenshots */,
+				E92BF08521CB638B005089BF /* JhPrivacyAuthTool.h */,
+				E92BF08421CB638B005089BF /* JhPrivacyAuthTool.m */,
+				E92BF00A21CB6126005089BF /* AppDelegate.h */,
+				E92BF00B21CB6126005089BF /* AppDelegate.m */,
+				E92BF00D21CB6126005089BF /* ViewController.h */,
+				E92BF00E21CB6126005089BF /* ViewController.m */,
+				E92BF01021CB6126005089BF /* Main.storyboard */,
+				E92BF01321CB6126005089BF /* Assets.xcassets */,
+				E92BF01521CB6126005089BF /* LaunchScreen.storyboard */,
+				E92BF01821CB6126005089BF /* Info.plist */,
+				E92BF01921CB6126005089BF /* main.m */,
+			);
+			path = JhPrivacyAuthTool;
+			sourceTree = "<group>";
+		};
+		E92BF02221CB6126005089BF /* JhPrivacyAuthToolTests */ = {
+			isa = PBXGroup;
+			children = (
+				E92BF02321CB6126005089BF /* JhPrivacyAuthToolTests.m */,
+				E92BF02521CB6126005089BF /* Info.plist */,
+			);
+			path = JhPrivacyAuthToolTests;
+			sourceTree = "<group>";
+		};
+		E92BF02D21CB6126005089BF /* JhPrivacyAuthToolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E92BF02E21CB6126005089BF /* JhPrivacyAuthToolUITests.m */,
+				E92BF03021CB6126005089BF /* Info.plist */,
+			);
+			path = JhPrivacyAuthToolUITests;
+			sourceTree = "<group>";
+		};
+		E92BF08721CB6392005089BF /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				E92BF08E21CB64E8005089BF /* 0.png */,
+				E92BF09021CB6530005089BF /* 1.png */,
+				E92BF09121CB6530005089BF /* 2.png */,
+				E92BF09221CB6530005089BF /* 3.png */,
+			);
+			path = screenshots;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E92BF00621CB6126005089BF /* JhPrivacyAuthTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E92BF03321CB6126005089BF /* Build configuration list for PBXNativeTarget "JhPrivacyAuthTool" */;
+			buildPhases = (
+				E92BF00321CB6126005089BF /* Sources */,
+				E92BF00421CB6126005089BF /* Frameworks */,
+				E92BF00521CB6126005089BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JhPrivacyAuthTool;
+			productName = JhPrivacyAuthTool;
+			productReference = E92BF00721CB6126005089BF /* JhPrivacyAuthTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E92BF01E21CB6126005089BF /* JhPrivacyAuthToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E92BF03621CB6126005089BF /* Build configuration list for PBXNativeTarget "JhPrivacyAuthToolTests" */;
+			buildPhases = (
+				E92BF01B21CB6126005089BF /* Sources */,
+				E92BF01C21CB6126005089BF /* Frameworks */,
+				E92BF01D21CB6126005089BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E92BF02121CB6126005089BF /* PBXTargetDependency */,
+			);
+			name = JhPrivacyAuthToolTests;
+			productName = JhPrivacyAuthToolTests;
+			productReference = E92BF01F21CB6126005089BF /* JhPrivacyAuthToolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E92BF02921CB6126005089BF /* JhPrivacyAuthToolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E92BF03921CB6126005089BF /* Build configuration list for PBXNativeTarget "JhPrivacyAuthToolUITests" */;
+			buildPhases = (
+				E92BF02621CB6126005089BF /* Sources */,
+				E92BF02721CB6126005089BF /* Frameworks */,
+				E92BF02821CB6126005089BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E92BF02C21CB6126005089BF /* PBXTargetDependency */,
+			);
+			name = JhPrivacyAuthToolUITests;
+			productName = JhPrivacyAuthToolUITests;
+			productReference = E92BF02A21CB6126005089BF /* JhPrivacyAuthToolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E92BEFFF21CB6126005089BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Jh;
+				TargetAttributes = {
+					E92BF00621CB6126005089BF = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					E92BF01E21CB6126005089BF = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = E92BF00621CB6126005089BF;
+					};
+					E92BF02921CB6126005089BF = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = E92BF00621CB6126005089BF;
+					};
+				};
+			};
+			buildConfigurationList = E92BF00221CB6126005089BF /* Build configuration list for PBXProject "JhPrivacyAuthTool" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E92BEFFE21CB6126005089BF;
+			productRefGroup = E92BF00821CB6126005089BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E92BF00621CB6126005089BF /* JhPrivacyAuthTool */,
+				E92BF01E21CB6126005089BF /* JhPrivacyAuthToolTests */,
+				E92BF02921CB6126005089BF /* JhPrivacyAuthToolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E92BF00521CB6126005089BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E92BF09421CB6530005089BF /* 2.png in Resources */,
+				E92BF08F21CB64E8005089BF /* 0.png in Resources */,
+				E92BF01721CB6126005089BF /* LaunchScreen.storyboard in Resources */,
+				E92BF01421CB6126005089BF /* Assets.xcassets in Resources */,
+				E92BF01221CB6126005089BF /* Main.storyboard in Resources */,
+				E92BF09521CB6530005089BF /* 3.png in Resources */,
+				E92BF09321CB6530005089BF /* 1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E92BF01D21CB6126005089BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E92BF02821CB6126005089BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E92BF00321CB6126005089BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E92BF00F21CB6126005089BF /* ViewController.m in Sources */,
+				E92BF01A21CB6126005089BF /* main.m in Sources */,
+				E92BF08621CB638B005089BF /* JhPrivacyAuthTool.m in Sources */,
+				E92BF00C21CB6126005089BF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E92BF01B21CB6126005089BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E92BF02421CB6126005089BF /* JhPrivacyAuthToolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E92BF02621CB6126005089BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E92BF02F21CB6126005089BF /* JhPrivacyAuthToolUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E92BF02121CB6126005089BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E92BF00621CB6126005089BF /* JhPrivacyAuthTool */;
+			targetProxy = E92BF02021CB6126005089BF /* PBXContainerItemProxy */;
+		};
+		E92BF02C21CB6126005089BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E92BF00621CB6126005089BF /* JhPrivacyAuthTool */;
+			targetProxy = E92BF02B21CB6126005089BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E92BF01021CB6126005089BF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E92BF01121CB6126005089BF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E92BF01521CB6126005089BF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E92BF01621CB6126005089BF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E92BF03121CB6126005089BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E92BF03221CB6126005089BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E92BF03421CB6126005089BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = JhPrivacyAuthTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jh.JhPrivacyAuthTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E92BF03521CB6126005089BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = JhPrivacyAuthTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jh.JhPrivacyAuthTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E92BF03721CB6126005089BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZH8KFMR9N;
+				INFOPLIST_FILE = JhPrivacyAuthToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjdsst.JhPrivacyAuthToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JhPrivacyAuthTool.app/JhPrivacyAuthTool";
+			};
+			name = Debug;
+		};
+		E92BF03821CB6126005089BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZH8KFMR9N;
+				INFOPLIST_FILE = JhPrivacyAuthToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjdsst.JhPrivacyAuthToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JhPrivacyAuthTool.app/JhPrivacyAuthTool";
+			};
+			name = Release;
+		};
+		E92BF03A21CB6126005089BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZH8KFMR9N;
+				INFOPLIST_FILE = JhPrivacyAuthToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjdsst.JhPrivacyAuthToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JhPrivacyAuthTool;
+			};
+			name = Debug;
+		};
+		E92BF03B21CB6126005089BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZH8KFMR9N;
+				INFOPLIST_FILE = JhPrivacyAuthToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjdsst.JhPrivacyAuthToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JhPrivacyAuthTool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E92BF00221CB6126005089BF /* Build configuration list for PBXProject "JhPrivacyAuthTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E92BF03121CB6126005089BF /* Debug */,
+				E92BF03221CB6126005089BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E92BF03321CB6126005089BF /* Build configuration list for PBXNativeTarget "JhPrivacyAuthTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E92BF03421CB6126005089BF /* Debug */,
+				E92BF03521CB6126005089BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E92BF03621CB6126005089BF /* Build configuration list for PBXNativeTarget "JhPrivacyAuthToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E92BF03721CB6126005089BF /* Debug */,
+				E92BF03821CB6126005089BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E92BF03921CB6126005089BF /* Build configuration list for PBXNativeTarget "JhPrivacyAuthToolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E92BF03A21CB6126005089BF /* Debug */,
+				E92BF03B21CB6126005089BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E92BEFFF21CB6126005089BF /* Project object */;
+}
