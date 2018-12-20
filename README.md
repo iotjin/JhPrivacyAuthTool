@@ -1,6 +1,6 @@
 # JhPrivacyAuthTool
 隐私权限判断 - 封装了几种常用的隐私权限判断(定位服务,通讯录, 日历,提醒事项, 照片, 蓝牙共享,麦克风, 相机)和通知的注册和判断。<br> 
-定位服务,蓝牙共享是单独调用的
+定位服务,蓝牙共享是单独调用的,  可以在 - (void)pushSetting:(BOOL)isPushSetting 方法中添加自己习惯使用的弹框提示没有开启权限
 
 ![](https://raw.githubusercontent.com/iotjin/JhPrivacyAuthTool/master/JhPrivacyAuthTool/screenshots/0.png)  <br> 
 ![](https://raw.githubusercontent.com/iotjin/JhPrivacyAuthTool/master/JhPrivacyAuthTool/screenshots/1.png)  <br> 
