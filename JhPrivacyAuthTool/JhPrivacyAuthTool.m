@@ -699,7 +699,13 @@ if(isPushSetting ==YES){
         }
     }];
     [alert addAction:okAction];
-    [[JhPrivacyAuthTool getCurrentVC] presentViewController:alert animated:YES completion:nil];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+           [[JhPrivacyAuthTool getCurrentVC] presentViewController:alert animated:YES completion:nil];
+        
+    });
+ 
     
 }else{
     

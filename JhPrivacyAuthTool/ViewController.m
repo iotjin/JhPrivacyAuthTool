@@ -122,7 +122,7 @@
         
     }else if([text isEqualToString:@"蓝牙共享(单独调用)"]){
         
-        [[JhPrivacyAuthTool shareInstance]CheckBluetoothAuthWithisPushSetting:YES withHandle:^(JhCBManagerStatus status) {
+        [[JhPrivacyAuthTool shareInstance]CheckBluetoothAuthWithisPushSetting:NO withHandle:^(JhCBManagerStatus status) {
             NSLog(@" 蓝牙授权状态 %ld ",(long)status);
         }];
         
@@ -139,7 +139,7 @@
         int type = (int)indexPath.row;
         
         __block BOOL boolValue;
-        [[JhPrivacyAuthTool shareInstance]CheckPrivacyAuthWithType:type isPushSetting:NO withHandle:^(BOOL granted, JhAuthStatus status) {
+        [[JhPrivacyAuthTool shareInstance]CheckPrivacyAuthWithType:type isPushSetting:YES withHandle:^(BOOL granted, JhAuthStatus status) {
             boolValue = granted;
             NSLog(@" 授权状态 %ld ",(long)status);
         }];
