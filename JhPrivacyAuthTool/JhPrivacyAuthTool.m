@@ -245,7 +245,6 @@
                         weakSelf.block(YES, JhAuthStatus_Authorized);
                     } else {
                         weakSelf.block(NO, JhAuthStatus_Denied);
-                        
                         [self pushSetting:isPushSetting]; //拒绝时跳转或提示
                     }
                 }];
@@ -254,7 +253,6 @@
         case PHAuthorizationStatusRestricted:
         {    //未授权，家长限制
             weakSelf.block(NO, JhAuthStatus_Restricted);
-            
            [self pushSetting:isPushSetting]; //拒绝时跳转或提示
           
         }
@@ -262,15 +260,12 @@
         case PHAuthorizationStatusDenied:
         {   //拒绝
             weakSelf.block(NO, JhAuthStatus_Denied);
-          
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
-            
         }
             break;
         case PHAuthorizationStatusAuthorized:
         {   //已授权
             weakSelf.block(YES, JhAuthStatus_Authorized);
-            
         }
             break;
             
@@ -293,26 +288,26 @@
         switch (authStatus) {
             case AVAuthorizationStatusNotDetermined:
             {   //第一次进来
-                [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
+                [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+                    
                     if (granted == YES) {
                         weakSelf.block(YES, JhAuthStatus_Authorized);
                     }else{
                         weakSelf.block(NO, JhAuthStatus_Denied);
-                         [self pushSetting:isPushSetting]; //拒绝时跳转或提示
+                        [self pushSetting:isPushSetting]; //拒绝时跳转或提示
                     }
                 }];
             }
+                break;
             case AVAuthorizationStatusRestricted:
             {   //未授权，家长限制
                 weakSelf.block(NO, JhAuthStatus_Restricted);
-                
                [self pushSetting:isPushSetting]; //拒绝时跳转或提示
             }
                 break;
             case AVAuthorizationStatusDenied:
             {   //拒绝
                 weakSelf.block(NO, JhAuthStatus_Denied);
-                
                 [self pushSetting:isPushSetting]; //拒绝时跳转或提示
             }
                 break;
@@ -336,12 +331,7 @@
 //         [JhProgressHUD showText:@"硬件不支持"];
     }
     
-    
-   
-    
 }
-
-
 
 #pragma mark - 麦克风权限
 - (void)Auth_Microphone:(BOOL)isPushSetting{
@@ -352,27 +342,27 @@
         case AVAuthorizationStatusNotDetermined:
         {   //第一次进来
             
-                [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
-                    if (granted == YES) {
-                       weakSelf.block(YES, JhAuthStatus_Authorized);
-                    }else{
-                       weakSelf.block(NO, JhAuthStatus_Denied);
-                    
-                        [self pushSetting:isPushSetting]; //拒绝时跳转或提示
-                    }
+            [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
+
+                        if (granted == YES) {
+                            weakSelf.block(YES, JhAuthStatus_Authorized);
+                        }else{
+                            weakSelf.block(NO, JhAuthStatus_Denied);
+                            [self pushSetting:isPushSetting]; //拒绝时跳转或提示
+                        }
                 }];
+            
         }
+            break;
         case AVAuthorizationStatusRestricted:
         {   //未授权，家长限制
             weakSelf.block(NO, JhAuthStatus_Restricted);
-            
            [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
         case AVAuthorizationStatusDenied:
         {   //拒绝
             weakSelf.block(NO, JhAuthStatus_Denied);
-            
            [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
            break;
@@ -405,17 +395,16 @@
                 }
             }];
         }
+            break;
         case CNAuthorizationStatusRestricted:
         {   //未授权，家长限制
             weakSelf.block(NO, JhAuthStatus_Restricted);
-            
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
         case CNAuthorizationStatusDenied:
         {   //拒绝
             weakSelf.block(NO, JhAuthStatus_Denied);
-            
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
@@ -445,22 +434,21 @@
                     weakSelf.block(YES, JhAuthStatus_Authorized);
                 }else{
                     weakSelf.block(NO, JhAuthStatus_Denied);
-                     [self pushSetting:isPushSetting]; //拒绝时跳转或提示
+                    [self pushSetting:isPushSetting]; //拒绝时跳转或提示
                 }
             }];
             
         }
+            break;
         case EKAuthorizationStatusRestricted:
         {   //未授权，家长限制
             weakSelf.block(NO, JhAuthStatus_Restricted);
-            
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
         case EKAuthorizationStatusDenied:
         {   //拒绝
             weakSelf.block(NO, JhAuthStatus_Denied);
-            
            [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
@@ -492,11 +480,12 @@
                     weakSelf.block(YES, JhAuthStatus_Authorized);
                 }else{
                     weakSelf.block(NO, JhAuthStatus_Denied);
-                     [self pushSetting:isPushSetting]; //拒绝时跳转或提示
+                    [self pushSetting:isPushSetting]; //拒绝时跳转或提示
                 }
             }];
 
         }
+            break;
         case EKAuthorizationStatusRestricted:
         {   //未授权，家长限制
             weakSelf.block(NO, JhAuthStatus_Restricted);
@@ -517,7 +506,6 @@
         default:
             break;
     }
-    
     
 }
 

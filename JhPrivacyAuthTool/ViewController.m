@@ -142,13 +142,21 @@
         [[JhPrivacyAuthTool shareInstance]CheckPrivacyAuthWithType:type isPushSetting:YES withHandle:^(BOOL granted, JhAuthStatus status) {
             boolValue = granted;
             NSLog(@" 授权状态 %ld ",(long)status);
+            
+//            if (granted ==YES) {
+//                NSLog(@" 2222222222222222222222222222222222 ");
+//            }
+//            
+            
         }];
+        
+        
         NSLog(@" 是否授权: %@", boolValue ? @"YES" : @"No");
         if(boolValue ==NO){
             return;
         }
         
-        NSLog(@" 234129473871293847197834918232134123412341432 ");
+        NSLog(@" 111111111111111111111111111111111111 ");
         
     }
     
