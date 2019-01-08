@@ -14,14 +14,14 @@
 * 通用
 ```
 
-         __block BOOL boolValue;
+         __block BOOL boolValue = NO;
         [[JhPrivacyAuthTool shareInstance]CheckPrivacyAuthWithType:JhPrivacyType_Photos isPushSetting:NO withHandle:^(BOOL granted, JhAuthStatus status) {
             boolValue = granted;
             NSLog(@" 授权状态 %ld ",(long)status);
         }];
         NSLog(@" 是否授权: %@", boolValue ? @"YES" : @"No");
-        if(boolValue ==NO){
-            return;
+        if(boolValue ==YES){
+            //要进行的操作
         }
 
 ```
