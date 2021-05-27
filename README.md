@@ -97,7 +97,7 @@ iOS隐私权限判断 - 封装了常用的隐私权限判断(定位服务,通讯
 * 通用
 ```objectivec
 __block BOOL boolValue;
-[[JhPrivacyAuthTool shareInstance]CheckPrivacyAuthWithType:JhPrivacyType_Photos isPushSetting:YES block:^(BOOL granted, JhAuthStatus status) {
+[[JhPrivacyAuthTool shareInstance]CheckPrivacyAuthWithType:JhPrivacyTypePhotos isPushSetting:YES block:^(BOOL granted, JhAuthStatus status) {
     boolValue = granted;
     NSLog(@" 授权状态 %ld ",(long)status);
     if (granted == YES) {
@@ -123,7 +123,7 @@ __block BOOL boolValue;
 * 健康
 ```objectivec
 //默认调用，默认为步数
-[[JhPrivacyAuthTool shareInstance]CheckPrivacyAuthWithType:JhPrivacyType_Health isPushSetting:YES block:^(BOOL granted, JhAuthStatus status) {
+[[JhPrivacyAuthTool shareInstance]CheckPrivacyAuthWithType:JhPrivacyTypeHealth isPushSetting:YES block:^(BOOL granted, JhAuthStatus status) {
     NSLog(@" 健康授权状态 %ld ",(long)status);
     if (granted == YES) {
         //要进行的操作

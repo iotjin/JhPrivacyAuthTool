@@ -12,44 +12,44 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, JhPrivacyType) {
-    JhPrivacyType_LocationServices      = 0,    // 定位服务
-    JhPrivacyType_Contacts                 ,    // 通讯录
-    JhPrivacyType_Calendars                ,    // 日历
-    JhPrivacyType_Reminders                ,    // 提醒事项
-    JhPrivacyType_Photos                   ,    // 照片
-    JhPrivacyType_BluetoothSharing         ,    // 蓝牙共享
-    JhPrivacyType_Microphone               ,    // 麦克风
-    JhPrivacyType_SpeechRecognition        ,    // 语音识别 >= iOS10
-    JhPrivacyType_Camera                   ,    // 相机
-    JhPrivacyType_Health                   ,    // 健康 >= iOS8.0 ，需要证书
-    JhPrivacyType_HomeKit                  ,    // 家庭 >= iOS8.0 ，需要证书
-    JhPrivacyType_MediaAndAppleMusic       ,    // 媒体与Apple Music >= iOS9.3
-    JhPrivacyType_MotionAndFitness         ,    // 运动与健身 >= iOS11.0
+    JhPrivacyTypeLocationServices      = 0,    // 定位服务
+    JhPrivacyTypeContacts                 ,    // 通讯录
+    JhPrivacyTypeCalendars                ,    // 日历
+    JhPrivacyTypeReminders                ,    // 提醒事项
+    JhPrivacyTypePhotos                   ,    // 照片
+    JhPrivacyTypeBluetoothSharing         ,    // 蓝牙共享
+    JhPrivacyTypeMicrophone               ,    // 麦克风
+    JhPrivacyTypeSpeechRecognition        ,    // 语音识别 >= iOS10
+    JhPrivacyTypeCamera                   ,    // 相机
+    JhPrivacyTypeHealth                   ,    // 健康 >= iOS8.0 ，需要证书
+    JhPrivacyTypeHomeKit                  ,    // 家庭 >= iOS8.0 ，需要证书
+    JhPrivacyTypeMediaAndAppleMusic       ,    // 媒体与Apple Music >= iOS9.3
+    JhPrivacyTypeMotionAndFitness         ,    // 运动与健身 >= iOS11.0
 };
 
 //对应类型权限状态，参考PHAuthorizationStatus等
 typedef NS_ENUM(NSInteger, JhAuthStatus) {
     /** 用户从未进行过授权等处理，首次访问相应内容会提示用户进行授权 */
-    JhAuthStatus_NotDetermined  = 0,
+    JhAuthStatusNotDetermined  = 0,
     /** 已授权 */
-    JhAuthStatus_Authorized     = 1,
+    JhAuthStatusAuthorized     = 1,
     /** 拒绝 */
-    JhAuthStatus_Denied         = 2,
+    JhAuthStatusDenied         = 2,
     /** 应用没有相关权限，且当前用户无法改变这个权限，比如:家长控制 */
-    JhAuthStatus_Restricted     = 3,
+    JhAuthStatusRestricted     = 3,
     /** 硬件等不支持 */
     JhAutStatus_NotSupport      = 4,
 };
 
 //定位权限状态，参考CLAuthorizationStatus
 typedef NS_ENUM(NSUInteger, JhLocationAuthStatus) {
-    JhLocationAuthStatus_NotDetermined         = 0, // 用户从未进行过授权等处理，首次访问相应内容会提示用户进行授权
-    JhLocationAuthStatus_Authorized            = 1, // 一直允许获取定位 ps：< iOS8用
-    JhLocationAuthStatus_Denied                = 2, // 拒绝
-    JhLocationAuthStatus_Restricted            = 3, // 应用没有相关权限，且当前用户无法改变这个权限，比如:家长控制
-    JhLocationAuthStatus_NotSupport            = 4, // 硬件等不支持
-    JhLocationAuthStatus_AuthorizedAlways      = 5, // 一直允许获取定位
-    JhLocationAuthStatus_AuthorizedWhenInUse   = 6, // 在使用时允许获取定位
+    JhLocationAuthStatusNotDetermined         = 0, // 用户从未进行过授权等处理，首次访问相应内容会提示用户进行授权
+    JhLocationAuthStatusAuthorized            = 1, // 一直允许获取定位 ps：< iOS8用
+    JhLocationAuthStatusDenied                = 2, // 拒绝
+    JhLocationAuthStatusRestricted            = 3, // 应用没有相关权限，且当前用户无法改变这个权限，比如:家长控制
+    JhLocationAuthStatusNotSupport            = 4, // 硬件等不支持
+    JhLocationAuthStatusAuthorizedAlways      = 5, // 一直允许获取定位
+    JhLocationAuthStatusAuthorizedWhenInUse   = 6, // 在使用时允许获取定位
 };
 
 //蓝牙状态，参考 CBManagerState

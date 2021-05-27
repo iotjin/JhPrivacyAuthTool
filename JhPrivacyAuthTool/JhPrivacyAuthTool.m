@@ -81,79 +81,79 @@
 - (void)CheckPrivacyAuthWithType:(JhPrivacyType)type isPushSetting:(BOOL)isPushSetting block:(ResultBlock)block {
     self.block = block;
     switch (type) {
-        case JhPrivacyType_LocationServices:
+        case JhPrivacyTypeLocationServices:
         {   // 定位服务
             _tipStr = @"请在iPhone的“设置-隐私-定位服务”选项中开启权限";
             NSLog(@"此方法暂时不适用 定位服务，请使用 【CheckLocationAuth block:】");
         }
             break;
-        case JhPrivacyType_Contacts:
+        case JhPrivacyTypeContacts:
         {   // 通讯录
             _tipStr = @"请在iPhone的“设置-隐私-通讯录”选项中开启权限";
             [self Auth_Contacts:isPushSetting];
         }
             break;
-        case JhPrivacyType_Calendars:
+        case JhPrivacyTypeCalendars:
         {   // 日历
             _tipStr = @"请在iPhone的“设置-隐私-日历”选项中开启权限";
             [self Auth_Calendars:isPushSetting];
         }
             break;
-        case JhPrivacyType_Reminders:
+        case JhPrivacyTypeReminders:
         {    // 提醒事项
             _tipStr = @"请在iPhone的“设置-隐私-提醒事项”选项中开启权限";
             [self Auth_Reminders:isPushSetting];
         }
             break;
-        case JhPrivacyType_Photos:
+        case JhPrivacyTypePhotos:
         {   // 相册
             _tipStr = @"请在iPhone的“设置-隐私-相册”选项中开启权限";
             [self Auth_Photos:isPushSetting];
         }
             break;
-        case JhPrivacyType_BluetoothSharing:
+        case JhPrivacyTypeBluetoothSharing:
         {    // 蓝牙共享
             _tipStr = @"请在iPhone的“设置-隐私-蓝牙”选项中开启权限";
             NSLog(@"此方法暂时不适用 蓝牙共享，请使用 【CheckBluetoothAuth block:】");
         }
             break;
-        case JhPrivacyType_Microphone:
+        case JhPrivacyTypeMicrophone:
         {   // 麦克风
             _tipStr = @"请在iPhone的“设置-隐私-麦克风”选项中开启权限";
             [self Auth_Microphone:isPushSetting];
         }
             break;
-        case JhPrivacyType_SpeechRecognition:
+        case JhPrivacyTypeSpeechRecognition:
         {   // 语音识别
             _tipStr = @"请在iPhone的“设置-隐私-语音识别”选项中开启权限";
             [self Auth_SpeechRecognition:isPushSetting];
         }
             break;
-        case JhPrivacyType_Camera:
+        case JhPrivacyTypeCamera:
         {   // 相机
             _tipStr = @"请在iPhone的“设置-隐私-相机”选项中开启权限";
             [self Auth_Camera:isPushSetting];
         }
             break;
-        case JhPrivacyType_Health:
+        case JhPrivacyTypeHealth:
         {   // 健康
             _tipStr = @"请在iPhone的“设置-隐私-健康”选项中开启权限";
             [self CheckHealthAuth:isPushSetting hkObjectType:nil block:block];
         }
             break;
-        case JhPrivacyType_HomeKit:
+        case JhPrivacyTypeHomeKit:
         {   // HomeKit
             _tipStr = @"请在iPhone的“设置-隐私-HomeKit”选项中开启权限";
             NSLog(@"暂未实现 HomeKit 检查");
         }
             break;
-        case JhPrivacyType_MediaAndAppleMusic:
+        case JhPrivacyTypeMediaAndAppleMusic:
         {   // 媒体与Apple Music
             _tipStr = @"请在iPhone的“设置-隐私-媒体与Apple Music”选项中开启权限";
             [self Auth_MediaAndAppleMusic:isPushSetting];
         }
             break;
-        case JhPrivacyType_MotionAndFitness:
+        case JhPrivacyTypeMotionAndFitness:
         {   // 运动与健身
             _tipStr = @"请在iPhone的“设置-隐私-运动与健身”选项中开启权限";
             [self Auth_MotionAndFitness:isPushSetting];
@@ -174,9 +174,9 @@
             CNContactStore *store = [[CNContactStore alloc] init];
             [store requestAccessForEntityType:CNEntityTypeContacts completionHandler:^(BOOL granted, NSError * _Nullable error) {
                 if (granted == YES) {
-                    weakSelf.block(YES, JhAuthStatus_Authorized);
+                    weakSelf.block(YES, JhAuthStatusAuthorized);
                 } else {
-                    weakSelf.block(NO, JhAuthStatus_Denied);
+                    weakSelf.block(NO, JhAuthStatusDenied);
                     [self pushSetting:isPushSetting]; //拒绝时跳转或提示
                 }
             }];
@@ -184,19 +184,19 @@
             break;
         case CNAuthorizationStatusRestricted:
         {   //未授权，家长限制
-            weakSelf.block(NO, JhAuthStatus_Restricted);
+            weakSelf.block(NO, JhAuthStatusRestricted);
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
         case CNAuthorizationStatusDenied:
         {   //拒绝
-            weakSelf.block(NO, JhAuthStatus_Denied);
+            weakSelf.block(NO, JhAuthStatusDenied);
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
         case CNAuthorizationStatusAuthorized:
         {   //已授权
-            weakSelf.block(YES, JhAuthStatus_Authorized);
+            weakSelf.block(YES, JhAuthStatusAuthorized);
         }
             break;
         default:
@@ -215,9 +215,9 @@
             EKEventStore *eventStore = [[EKEventStore alloc] init];
             [eventStore requestAccessToEntityType:type completion:^(BOOL granted, NSError * _Nullable error) {
                 if (granted == YES) {
-                    weakSelf.block(YES, JhAuthStatus_Authorized);
+                    weakSelf.block(YES, JhAuthStatusAuthorized);
                 } else {
-                    weakSelf.block(NO, JhAuthStatus_Denied);
+                    weakSelf.block(NO, JhAuthStatusDenied);
                     [self pushSetting:isPushSetting]; //拒绝时跳转或提示
                 }
             }];
@@ -225,19 +225,19 @@
             break;
         case EKAuthorizationStatusRestricted:
         {   //未授权，家长限制
-            weakSelf.block(NO, JhAuthStatus_Restricted);
+            weakSelf.block(NO, JhAuthStatusRestricted);
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
         case EKAuthorizationStatusDenied:
         {   //拒绝
-            weakSelf.block(NO, JhAuthStatus_Denied);
+            weakSelf.block(NO, JhAuthStatusDenied);
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
         case EKAuthorizationStatusAuthorized:
         {   //已授权
-            weakSelf.block(YES, JhAuthStatus_Authorized);
+            weakSelf.block(YES, JhAuthStatusAuthorized);
         }
             break;
         default:
@@ -256,9 +256,9 @@
             EKEventStore *eventStore = [[EKEventStore alloc] init];
             [eventStore requestAccessToEntityType:type completion:^(BOOL granted, NSError * _Nullable error) {
                 if (granted == YES) {
-                    weakSelf.block(YES, JhAuthStatus_Authorized);
+                    weakSelf.block(YES, JhAuthStatusAuthorized);
                 } else {
-                    weakSelf.block(NO, JhAuthStatus_Denied);
+                    weakSelf.block(NO, JhAuthStatusDenied);
                     [self pushSetting:isPushSetting]; //拒绝时跳转或提示
                 }
             }];
@@ -266,19 +266,19 @@
             break;
         case EKAuthorizationStatusRestricted:
         {   //未授权，家长限制
-            weakSelf.block(NO, JhAuthStatus_Restricted);
+            weakSelf.block(NO, JhAuthStatusRestricted);
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
         case EKAuthorizationStatusDenied:
         {   //拒绝
-            weakSelf.block(NO, JhAuthStatus_Denied);
+            weakSelf.block(NO, JhAuthStatusDenied);
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
         case EKAuthorizationStatusAuthorized:
         {   //已授权
-            weakSelf.block(YES, JhAuthStatus_Authorized);
+            weakSelf.block(YES, JhAuthStatusAuthorized);
         }
             break;
         default:
@@ -295,9 +295,9 @@
         {   //第一次进来
             [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
                 if (status == PHAuthorizationStatusAuthorized) {
-                    weakSelf.block(YES, JhAuthStatus_Authorized);
+                    weakSelf.block(YES, JhAuthStatusAuthorized);
                 } else {
-                    weakSelf.block(NO, JhAuthStatus_Denied);
+                    weakSelf.block(NO, JhAuthStatusDenied);
                     [self pushSetting:isPushSetting]; //拒绝时跳转或提示
                 }
             }];
@@ -305,19 +305,19 @@
             break;
         case PHAuthorizationStatusRestricted:
         {    //未授权，家长限制
-            weakSelf.block(NO, JhAuthStatus_Restricted);
+            weakSelf.block(NO, JhAuthStatusRestricted);
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
         case PHAuthorizationStatusDenied:
         {   //拒绝
-            weakSelf.block(NO, JhAuthStatus_Denied);
+            weakSelf.block(NO, JhAuthStatusDenied);
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
         case PHAuthorizationStatusAuthorized:
         {   //已授权
-            weakSelf.block(YES, JhAuthStatus_Authorized);
+            weakSelf.block(YES, JhAuthStatusAuthorized);
         }
             break;
         default:
@@ -334,9 +334,9 @@
         {   //第一次进来
             [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
                 if (granted == YES) {
-                    weakSelf.block(YES, JhAuthStatus_Authorized);
+                    weakSelf.block(YES, JhAuthStatusAuthorized);
                 } else {
-                    weakSelf.block(NO, JhAuthStatus_Denied);
+                    weakSelf.block(NO, JhAuthStatusDenied);
                     [self pushSetting:isPushSetting]; //拒绝时跳转或提示
                 }
             }];
@@ -344,19 +344,19 @@
             break;
         case AVAuthorizationStatusRestricted:
         {   //未授权，家长限制
-            weakSelf.block(NO, JhAuthStatus_Restricted);
+            weakSelf.block(NO, JhAuthStatusRestricted);
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
         case AVAuthorizationStatusDenied:
         {   //拒绝
-            weakSelf.block(NO, JhAuthStatus_Denied);
+            weakSelf.block(NO, JhAuthStatusDenied);
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
             break;
         case AVAuthorizationStatusAuthorized:
         {   //已授权
-            weakSelf.block(YES, JhAuthStatus_Authorized);
+            weakSelf.block(YES, JhAuthStatusAuthorized);
         }
             break;
         default:
@@ -372,16 +372,16 @@
         if (speechAuthStatus == SFSpeechRecognizerAuthorizationStatusNotDetermined) {
             [SFSpeechRecognizer requestAuthorization:^(SFSpeechRecognizerAuthorizationStatus status) {
                 if (status == SFSpeechRecognizerAuthorizationStatusAuthorized) {
-                    weakSelf.block(YES, JhAuthStatus_Authorized);
+                    weakSelf.block(YES, JhAuthStatusAuthorized);
                 } else {
-                    weakSelf.block(NO, JhAuthStatus_Denied);
+                    weakSelf.block(NO, JhAuthStatusDenied);
                     [self pushSetting:isPushSetting]; //拒绝时跳转或提示
                 }
             }];
         } else if (speechAuthStatus == SFSpeechRecognizerAuthorizationStatusAuthorized) {
-            weakSelf.block(YES, JhAuthStatus_Authorized);
+            weakSelf.block(YES, JhAuthStatusAuthorized);
         } else {
-            weakSelf.block(NO, JhAuthStatus_Denied);
+            weakSelf.block(NO, JhAuthStatusDenied);
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         }
     } else {
@@ -400,9 +400,9 @@
             {   //第一次进来
                 [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
                     if (granted == YES) {
-                        weakSelf.block(YES, JhAuthStatus_Authorized);
+                        weakSelf.block(YES, JhAuthStatusAuthorized);
                     } else {
-                        weakSelf.block(NO, JhAuthStatus_Denied);
+                        weakSelf.block(NO, JhAuthStatusDenied);
                         [self pushSetting:isPushSetting]; //拒绝时跳转或提示
                     }
                 }];
@@ -410,19 +410,19 @@
                 break;
             case AVAuthorizationStatusRestricted:
             {   //未授权，家长限制
-                weakSelf.block(NO, JhAuthStatus_Restricted);
+                weakSelf.block(NO, JhAuthStatusRestricted);
                 [self pushSetting:isPushSetting]; //拒绝时跳转或提示
             }
                 break;
             case AVAuthorizationStatusDenied:
             {   //拒绝
-                weakSelf.block(NO, JhAuthStatus_Denied);
+                weakSelf.block(NO, JhAuthStatusDenied);
                 [self pushSetting:isPushSetting]; //拒绝时跳转或提示
             }
                 break;
             case AVAuthorizationStatusAuthorized:
             {   //已授权
-                weakSelf.block(YES, JhAuthStatus_Authorized);
+                weakSelf.block(YES, JhAuthStatusAuthorized);
             }
                 break;
             default:
@@ -445,20 +445,20 @@
         if (authStatus == MPMediaLibraryAuthorizationStatusNotDetermined) {
             [MPMediaLibrary requestAuthorization:^(MPMediaLibraryAuthorizationStatus status) {
                 if (status == MPMediaLibraryAuthorizationStatusAuthorized) {
-                    weakSelf.block(YES, JhAuthStatus_Authorized);
+                    weakSelf.block(YES, JhAuthStatusAuthorized);
                 } else {
-                    weakSelf.block(NO, JhAuthStatus_Denied);
+                    weakSelf.block(NO, JhAuthStatusDenied);
                     [self pushSetting:isPushSetting]; //拒绝时跳转或提示
                 }
             }];
         } else if (authStatus == MPMediaLibraryAuthorizationStatusDenied) {
-            weakSelf.block(NO, JhAuthStatus_Denied);
+            weakSelf.block(NO, JhAuthStatusDenied);
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         } else if (authStatus == MPMediaLibraryAuthorizationStatusRestricted) {
-            weakSelf.block(NO, JhAuthStatus_Restricted);
+            weakSelf.block(NO, JhAuthStatusRestricted);
             [self pushSetting:isPushSetting]; //拒绝时跳转或提示
         } else if (authStatus == MPMediaLibraryAuthorizationStatusAuthorized) {
-            weakSelf.block(YES, JhAuthStatus_Authorized);
+            weakSelf.block(YES, JhAuthStatusAuthorized);
         }
     } else {
         //9.3以前不能读取媒体资料库
@@ -479,25 +479,25 @@
                     self.motionActivityQueue = [[NSOperationQueue alloc] init];
                     [self.cmManager startActivityUpdatesToQueue:self.motionActivityQueue withHandler:^(CMMotionActivity *activity) {
                         [weakSelf.cmManager stopActivityUpdates];
-                        weakSelf.block(YES, JhAuthStatus_Authorized);
+                        weakSelf.block(YES, JhAuthStatusAuthorized);
                     }];
                 }
                     break;
                 case CMAuthorizationStatusRestricted:
                 {   //未授权，家长限制
-                    self.block(NO, JhAuthStatus_Restricted);
+                    self.block(NO, JhAuthStatusRestricted);
                     [self pushSetting:isPushSetting];
                 }
                     break;
                 case CMAuthorizationStatusDenied:
                 {   //拒绝
-                    self.block(NO, JhAuthStatus_Denied);
+                    self.block(NO, JhAuthStatusDenied);
                     [self pushSetting:isPushSetting];
                 }
                     break;
                 case CMAuthorizationStatusAuthorized:
                 {   //已授权
-                    self.block(YES, JhAuthStatus_Authorized);
+                    self.block(YES, JhAuthStatusAuthorized);
                 }
                     break;
                 default:
@@ -530,9 +530,9 @@
                 self.healthStore = [[HKHealthStore alloc] init];
                 [self.healthStore requestAuthorizationToShareTypes:typeSet readTypes:typeSet completion:^(BOOL success, NSError *error) {
                     if (success) {
-                        weakSelf.block(YES, JhAuthStatus_Authorized);
+                        weakSelf.block(YES, JhAuthStatusAuthorized);
                     } else {
-                        weakSelf.block(NO, JhAuthStatus_Denied);
+                        weakSelf.block(NO, JhAuthStatusDenied);
                         [weakSelf pushSetting:isPushSetting];
                     }
                 }];
@@ -540,13 +540,13 @@
                 break;
             case HKAuthorizationStatusSharingDenied:
             {   //拒绝
-                self.block(NO, JhAuthStatus_Denied);
+                self.block(NO, JhAuthStatusDenied);
                 [self pushSetting:isPushSetting];
             }
                 break;
             case HKAuthorizationStatusSharingAuthorized:
             {   //已授权
-                self.block(YES, JhAuthStatus_Authorized);
+                self.block(YES, JhAuthStatusAuthorized);
             }
                 break;
             default:
@@ -566,7 +566,7 @@
     BOOL isLocationServicesEnabled = [CLLocationManager locationServicesEnabled];
     if (!isLocationServicesEnabled) {
         NSLog(@"定位服务不可用，例如定位没有打开...");
-        weakSelf.locationResultBlock(JhLocationAuthStatus_NotSupport);
+        weakSelf.locationResultBlock(JhLocationAuthStatusNotSupport);
         //        [JhProgressHUD showText:@"定位服务不可用"];
     } else {
         _tipStr = @"请在iPhone的“设置-隐私-定位服务”选项中开启权限";
@@ -581,45 +581,45 @@
                 [self.locationManager requestWhenInUseAuthorization];
                 [self setKCLCallBackBlock:^(CLAuthorizationStatus state){
                     if (authStatus == kCLAuthorizationStatusNotDetermined) {
-                        weakSelf.locationResultBlock(JhLocationAuthStatus_NotDetermined);
+                        weakSelf.locationResultBlock(JhLocationAuthStatusNotDetermined);
                     }else if (authStatus == kCLAuthorizationStatusRestricted) {
                         //未授权，家长限制
-                        weakSelf.locationResultBlock(JhLocationAuthStatus_Restricted);
+                        weakSelf.locationResultBlock(JhLocationAuthStatusRestricted);
                         [weakSelf pushSetting:isPushSetting]; //拒绝时跳转或提示
                     }else if (authStatus == kCLAuthorizationStatusDenied) {
                         //拒绝
-                        weakSelf.locationResultBlock(JhLocationAuthStatus_Denied);
+                        weakSelf.locationResultBlock(JhLocationAuthStatusDenied);
                         [weakSelf pushSetting:isPushSetting]; //拒绝时跳转或提示
                     }else if (authStatus == kCLAuthorizationStatusAuthorizedAlways) {
                         //总是
-                        weakSelf.locationResultBlock(JhLocationAuthStatus_AuthorizedAlways);
+                        weakSelf.locationResultBlock(JhLocationAuthStatusAuthorizedAlways);
                     }else if (authStatus == kCLAuthorizationStatusAuthorizedWhenInUse) {
                         //使用期间
-                        weakSelf.locationResultBlock(JhLocationAuthStatus_AuthorizedWhenInUse);
+                        weakSelf.locationResultBlock(JhLocationAuthStatusAuthorizedWhenInUse);
                     }
                 }];
             }
                 break;
             case kCLAuthorizationStatusRestricted:
             {   //未授权，家长限制
-                weakSelf.locationResultBlock(JhLocationAuthStatus_Restricted);
+                weakSelf.locationResultBlock(JhLocationAuthStatusRestricted);
                 [self pushSetting:isPushSetting]; //拒绝时跳转或提示
             }
                 break;
             case kCLAuthorizationStatusDenied:
             {   //拒绝
                 [self pushSetting:isPushSetting]; //拒绝时跳转或提示
-                weakSelf.locationResultBlock(JhLocationAuthStatus_Denied);
+                weakSelf.locationResultBlock(JhLocationAuthStatusDenied);
             }
                 break;
             case kCLAuthorizationStatusAuthorizedAlways:
             {   //总是
-                weakSelf.locationResultBlock(JhLocationAuthStatus_AuthorizedAlways);
+                weakSelf.locationResultBlock(JhLocationAuthStatusAuthorizedAlways);
             }
                 break;
             case kCLAuthorizationStatusAuthorizedWhenInUse:
             {   //使用期间
-                weakSelf.locationResultBlock(JhLocationAuthStatus_AuthorizedWhenInUse);
+                weakSelf.locationResultBlock(JhLocationAuthStatusAuthorizedWhenInUse);
             }
                 break;
             default:
@@ -764,9 +764,9 @@
         [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
             //已授权
             if (settings.authorizationStatus == UNAuthorizationStatusAuthorized) {
-                weakSelf.block(YES, JhAuthStatus_Authorized);
+                weakSelf.block(YES, JhAuthStatusAuthorized);
             } else {
-                weakSelf.block(NO, JhAuthStatus_Denied);
+                weakSelf.block(NO, JhAuthStatusDenied);
                 [self pushSetting:isPushSetting];
             }
         }];
@@ -774,11 +774,11 @@
         UIUserNotificationSettings *settings = [[UIApplication sharedApplication] currentUserNotificationSettings];
         if(settings.types == UIUserNotificationTypeNone){
             NSLog(@" 通知权限 - 没开启 IOS8-iOS10 ");
-            weakSelf.block(NO, JhAuthStatus_Denied);
+            weakSelf.block(NO, JhAuthStatusDenied);
             [self pushSetting:isPushSetting];
         } else {
             NSLog(@" 通知权限 - 开了 IOS8-iOS10 ");
-            weakSelf.block(YES, JhAuthStatus_Authorized);
+            weakSelf.block(YES, JhAuthStatusAuthorized);
         }
     } else {
 #pragma clang diagnostic push
@@ -786,11 +786,11 @@
         UIRemoteNotificationType type = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
         if (type == UIUserNotificationTypeNone) {
             NSLog(@" 通知权限 - 没开启 IOS8以下 ");
-            weakSelf.block(NO, JhAuthStatus_Denied);
+            weakSelf.block(NO, JhAuthStatusDenied);
             [self pushSetting:isPushSetting];
         } else {
             NSLog(@" 通知权限 - 开了 IOS8以下 ");
-            weakSelf.block(YES, JhAuthStatus_Authorized);
+            weakSelf.block(YES, JhAuthStatusAuthorized);
         }
 #pragma clang diagnostic pop
     }
