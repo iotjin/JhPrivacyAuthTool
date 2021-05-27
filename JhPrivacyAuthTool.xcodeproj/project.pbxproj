@@ -16,10 +16,7 @@
 		E92BF02421CB6126005089BF /* JhPrivacyAuthToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BF02321CB6126005089BF /* JhPrivacyAuthToolTests.m */; };
 		E92BF02F21CB6126005089BF /* JhPrivacyAuthToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BF02E21CB6126005089BF /* JhPrivacyAuthToolUITests.m */; };
 		E92BF08621CB638B005089BF /* JhPrivacyAuthTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BF08421CB638B005089BF /* JhPrivacyAuthTool.m */; };
-		E92BF08F21CB64E8005089BF /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = E92BF08E21CB64E8005089BF /* 0.png */; };
-		E92BF09321CB6530005089BF /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E92BF09021CB6530005089BF /* 1.png */; };
-		E92BF09421CB6530005089BF /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = E92BF09121CB6530005089BF /* 2.png */; };
-		E92BF09521CB6530005089BF /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = E92BF09221CB6530005089BF /* 3.png */; };
+		EDE5827C265F703E00A9253F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE5827B265F703E00A9253F /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +55,8 @@
 		E92BF03021CB6126005089BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E92BF08421CB638B005089BF /* JhPrivacyAuthTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhPrivacyAuthTool.m; sourceTree = "<group>"; };
 		E92BF08521CB638B005089BF /* JhPrivacyAuthTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhPrivacyAuthTool.h; sourceTree = "<group>"; };
-		E92BF08E21CB64E8005089BF /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
-		E92BF09021CB6530005089BF /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		E92BF09121CB6530005089BF /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		E92BF09221CB6530005089BF /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		EDE58279265F703D00A9253F /* JhPrivacyAuthTool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JhPrivacyAuthTool.entitlements; sourceTree = "<group>"; };
+		EDE5827B265F703E00A9253F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDE5827C265F703E00A9253F /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +92,7 @@
 				E92BF02221CB6126005089BF /* JhPrivacyAuthToolTests */,
 				E92BF02D21CB6126005089BF /* JhPrivacyAuthToolUITests */,
 				E92BF00821CB6126005089BF /* Products */,
+				EDE5827A265F703E00A9253F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +109,7 @@
 		E92BF00921CB6126005089BF /* JhPrivacyAuthTool */ = {
 			isa = PBXGroup;
 			children = (
+				EDE58279265F703D00A9253F /* JhPrivacyAuthTool.entitlements */,
 				E92BF08721CB6392005089BF /* screenshots */,
 				E92BF08521CB638B005089BF /* JhPrivacyAuthTool.h */,
 				E92BF08421CB638B005089BF /* JhPrivacyAuthTool.m */,
@@ -149,12 +147,16 @@
 		E92BF08721CB6392005089BF /* screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				E92BF08E21CB64E8005089BF /* 0.png */,
-				E92BF09021CB6530005089BF /* 1.png */,
-				E92BF09121CB6530005089BF /* 2.png */,
-				E92BF09221CB6530005089BF /* 3.png */,
 			);
 			path = screenshots;
+			sourceTree = "<group>";
+		};
+		EDE5827A265F703E00A9253F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDE5827B265F703E00A9253F /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,13 +262,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E92BF09421CB6530005089BF /* 2.png in Resources */,
-				E92BF08F21CB64E8005089BF /* 0.png in Resources */,
 				E92BF01721CB6126005089BF /* LaunchScreen.storyboard in Resources */,
 				E92BF01421CB6126005089BF /* Assets.xcassets in Resources */,
 				E92BF01221CB6126005089BF /* Main.storyboard in Resources */,
-				E92BF09521CB6530005089BF /* 3.png in Resources */,
-				E92BF09321CB6530005089BF /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,15 +463,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = JhPrivacyAuthTool/JhPrivacyAuthTool.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8ZH8KFMR9N;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JhPrivacyAuthTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Jh.JhPrivacyAuthTool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JhPrivacyAuthTool.Jh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -483,15 +482,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = JhPrivacyAuthTool/JhPrivacyAuthTool.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8ZH8KFMR9N;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JhPrivacyAuthTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Jh.JhPrivacyAuthTool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JhPrivacyAuthTool.Jh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -501,8 +501,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8ZH8KFMR9N;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JhPrivacyAuthToolTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -520,8 +521,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8ZH8KFMR9N;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JhPrivacyAuthToolTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
