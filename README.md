@@ -17,7 +17,6 @@ iOS隐私权限判断 - 封装了常用的隐私权限判断(定位服务,通讯
 <br> 
 
 
-
 <details>
    <summary><strong>Info.plist 隐私权限配置</strong></summary>
 
@@ -76,7 +75,6 @@ iOS隐私权限判断 - 封装了常用的隐私权限判断(定位服务,通讯
  <string>APP需要您的同意，才能获取AppleTV使用权限</string>
 ```
 </details>
-
 
 
 <br> 
